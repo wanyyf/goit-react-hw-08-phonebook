@@ -48,9 +48,8 @@ const contactsSlice = createSlice({
       state.error = payload;
     },
     [deleteContact.fulfilled]: (state, { payload }) => {
-      console.log(payload);
       state.isLoading = false;
-      state.items = state.items.filter(item => item.id !== payload.id);
+      state.items = state.items.filter(item => item.id !== payload);
     },
   },
 });

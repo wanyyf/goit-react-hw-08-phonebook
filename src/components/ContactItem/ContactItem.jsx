@@ -3,9 +3,10 @@ import { useDispatch } from 'react-redux';
 import { deleteContact } from '../../redux/contacts/contactOperasions';
 const ContactItem = ({ name, phone, id }) => {
   const dispatch = useDispatch();
+  console.log(id);
   return (
     <li>
-      {name} {phone}{' '}
+      {name} {phone}
       <button
         type="button"
         className="button-2"
